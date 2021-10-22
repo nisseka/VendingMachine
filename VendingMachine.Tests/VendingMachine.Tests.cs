@@ -111,6 +111,9 @@ namespace Vending_Machine.Tests
 	    expectedString += "\nChange returned:\n   20 kr: 1\n   10 kr: 1\n    5 kr: 1\n    1 kr: 2\n";
 
 	    Assert.Equal(expectedString, transactionSummary);
+
+	    str = purchasedProduct.Use();		    // Test Use()	
+	    Assert.Equal("Drink it", str);
 	}
     }
 }
